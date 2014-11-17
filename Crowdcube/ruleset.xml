@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ruleset name="Crowdcube">
+
+    <description>Crowdcube PHP coding standard</description>
+
+    <!-- ============================================================= -->
+    <!-- Import whole standards                                        -->
+    <!-- ============================================================= -->
+    <rule ref="PSR2"/>
+
+    <!-- ============================================================= -->
+    <!-- Import partials                                               -->
+    <!-- ============================================================= -->
+    <rule ref="Generic.PHP.DeprecatedFunctions"/>
+
+    <rule ref="Generic.Commenting.Fixme"/>
+    <rule ref="Generic.Commenting.Todo"/>
+
+    <!-- === Code Analysis === -->
+    <rule ref="Generic.CodeAnalysis.UnconditionalIfStatement"/>
+    <rule ref="Squiz.PHP.GlobalKeyword"/>
+
+    <!-- === Namespaces === -->
+    <rule ref="PSR1.Classes.ClassDeclaration.MissingNamespace">
+        <exclude-pattern>*/src/migrations/*</exclude-pattern>
+        <exclude-pattern>*/src/stubs/*</exclude-pattern>
+    </rule>
+
+    <!-- === Naming === -->
+    <rule ref="Generic.Classes.DuplicateClassName"/>
+
+    <!-- === Commenting === -->
+    <rule ref="Squiz.Commenting.DocCommentAlignment"/>
+    <rule ref="Squiz.Commenting.EmptyCatchComment"/>
+    <rule ref="Squiz.Commenting.ClassComment">
+        <exclude-pattern>*/tests/*</exclude-pattern>
+        <exclude-pattern>*/src/migrations/*</exclude-pattern>
+        <exclude-pattern>*/src/stubs/*</exclude-pattern>
+    </rule>
+    <rule ref="Squiz.Commenting.VariableComment">
+        <exclude-pattern>*/tests/*</exclude-pattern>
+    </rule>
+
+    <!-- Disabled until upstream issue has been resolved -->
+    <!-- https://github.com/squizlabs/PHP_CodeSniffer/pull/222 -->
+    <!-- Issue relates to pulling in parent docblock -->
+    <!-- Plus ..... TODO: add remaining upstream issues -->
+    <!--<rule ref="Squiz.Commenting.FunctionComment">-->
+        <!--<exclude-pattern>*/tests/*</exclude-pattern>-->
+    <!--</rule>-->
+    <!--<rule ref="Squiz.Commenting.FunctionComment.Missing">-->
+        <!--<exclude-pattern>*/src/migrations/*</exclude-pattern>-->
+    <!--</rule>-->
+    <!--<rule ref="Squiz.Commenting.FunctionComment.MissingParamComment">-->
+        <!--<severity>0</severity>-->
+    <!--</rule>-->
+    <!--<rule ref="Squiz.Commenting.FunctionCommentThrowTag"/>-->
+
+</ruleset>

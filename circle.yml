@@ -1,0 +1,7 @@
+machine:
+  php:
+    version: 5.6.2
+
+test:
+  override:
+    - ./vendor/bin/phpcs --standard=Crowdcube/ruleset.xml -e

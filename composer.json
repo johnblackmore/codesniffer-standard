@@ -1,0 +1,13 @@
+{
+    "name": "crowdcube/codesniffer-standard",
+    "description": "Crowdcube PHP_Codesniffer Standard",
+    "authors": [
+        {
+            "name": "Rob Crowe",
+            "email": "rob.crowe@crowdcube.com"
+        }
+    ],
+    "require": {
+        "squizlabs/php_codesniffer": "2.0.*@dev"
+    }
+}
