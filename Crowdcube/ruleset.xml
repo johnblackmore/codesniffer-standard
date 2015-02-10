@@ -20,6 +20,7 @@
     <rule ref="Generic.CodeAnalysis.UnconditionalIfStatement"/>
     <rule ref="Squiz.PHP.GlobalKeyword"/>
 
+
     <!-- === Namespaces === -->
     <rule ref="PSR1.Classes.ClassDeclaration.MissingNamespace">
         <exclude-pattern>*/src/migrations/*</exclude-pattern>
@@ -41,19 +42,9 @@
         <exclude-pattern>*/tests/*</exclude-pattern>
     </rule>
 
-    <!-- Disabled until upstream issue has been resolved -->
-    <!-- https://github.com/squizlabs/PHP_CodeSniffer/pull/222 -->
-    <!-- Issue relates to pulling in parent docblock -->
-    <!-- Plus ..... TODO: add remaining upstream issues -->
-    <!--<rule ref="Squiz.Commenting.FunctionComment">-->
-        <!--<exclude-pattern>*/tests/*</exclude-pattern>-->
-    <!--</rule>-->
-    <!--<rule ref="Squiz.Commenting.FunctionComment.Missing">-->
-        <!--<exclude-pattern>*/src/migrations/*</exclude-pattern>-->
-    <!--</rule>-->
-    <!--<rule ref="Squiz.Commenting.FunctionComment.MissingParamComment">-->
-        <!--<severity>0</severity>-->
-    <!--</rule>-->
-    <!--<rule ref="Squiz.Commenting.FunctionCommentThrowTag"/>-->
+    <!-- === Misc === -->
+    <rule ref="Generic.Functions.FunctionCallArgumentSpacing.TooMuchSpaceAfterComma">
+        <exclude-pattern>routes.php</exclude-pattern>
+    </rule>
 
 </ruleset>
